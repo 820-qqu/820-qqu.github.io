@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo + Git 命令速查 | 章臣宇的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="日常真正会敲的就十几条命令，其余全是排错时的救火队。这份按「每天用」到「偶尔才动」排序，所有命令默认在博客根目录执行（本机是 D:\zhangjunhaoCODE\projects\myblog）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + Git 命令速查">
+<meta property="og:url" content="https://820-qqu.github.io/2026/10/21/hexo-git-cheatsheet/index.html">
+<meta property="og:site_name" content="章臣宇的博客">
+<meta property="og:description" content="日常真正会敲的就十几条命令，其余全是排错时的救火队。这份按「每天用」到「偶尔才动」排序，所有命令默认在博客根目录执行（本机是 D:\zhangjunhaoCODE\projects\myblog）。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-10-21T15:45:00.000Z">
+<meta property="article:modified_time" content="2026-10-21T15:45:00.000Z">
+<meta property="article:author" content="章臣宇">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="部署">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="章臣宇的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">章臣宇的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://820-qqu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-hexo-git-cheatsheet" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/10/21/hexo-git-cheatsheet/" class="article-date">
+  <time class="dt-published" datetime="2026-10-21T15:45:00.000Z" itemprop="datePublished">2026-10-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>►<a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2/%E9%80%9F%E6%9F%A5/">速查</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hexo + Git 命令速查
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>日常真正会敲的就十几条命令，其余全是排错时的救火队。这份按「每天用」到「偶尔才动」排序，<strong>所有命令默认在博客根目录执行</strong>（本机是 <code>D:\zhangjunhaoCODE\projects\myblog</code>）。</p>
+<span id="more"></span>
+
+<h2 id="1-环境检查"><a href="#1-环境检查" class="headerlink" title="1. 环境检查"></a>1. 环境检查</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>看什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hexo -v</code></td>
+<td>Hexo 与 Node 版本（本站 8.1.2 &#x2F; Node v22.20.0）</td>
+</tr>
+<tr>
+<td><code>node -v</code></td>
+<td>必须 ≥ 20.19，低了 Hexo 8 起不来</td>
+</tr>
+<tr>
+<td><code>npm -v</code></td>
+<td>装依赖时用</td>
+</tr>
+<tr>
+<td><code>git --version</code></td>
+<td>git 版本，也顺带证明 git 能跑</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>本机是 PowerShell 5.1，<code>hexo new &quot;中文标题&quot;</code> 会把中文参数按 GBK 传坏。文件名一律用英文&#x2F;拼音，中文标题写进 front-matter 的 <code>title:</code>。</p>
+</blockquote>
+<h2 id="2-Hexo-命令"><a href="#2-Hexo-命令" class="headerlink" title="2. Hexo 命令"></a>2. Hexo 命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hexo new my-post</code></td>
+<td>新建文章到 <code>source\_posts\</code>，并自动建同名图片文件夹</td>
+</tr>
+<tr>
+<td><code>hexo new page about</code></td>
+<td>新建独立页面 → <code>source\about\index.md</code>，发布后是 <code>/about/</code></td>
+</tr>
+<tr>
+<td><code>hexo new draft idea</code></td>
+<td>新建草稿到 <code>source\_drafts\</code>，不会发布</td>
+</tr>
+<tr>
+<td><code>hexo publish idea</code></td>
+<td>草稿转正式，移到 <code>source\_posts\</code></td>
+</tr>
+<tr>
+<td><code>hexo s</code></td>
+<td>本地预览 → <code>http://localhost:4000</code>，会一直占着窗口</td>
+</tr>
+<tr>
+<td><code>hexo s -p 5000</code></td>
+<td>4000 被占用时换端口</td>
+</tr>
+<tr>
+<td><code>hexo clean</code></td>
+<td>删掉 <code>db.json</code> 和 <code>public\</code>（换主题、删文章后必做）</td>
+</tr>
+<tr>
+<td><code>hexo g</code></td>
+<td>生成静态站到 <code>public\</code></td>
+</tr>
+<tr>
+<td><code>hexo d</code></td>
+<td>把 <code>public\</code> 强推到 Pages 仓库</td>
+</tr>
+<tr>
+<td><code>hexo clean; hexo g; hexo d</code></td>
+<td>一条龙，改动大时用</td>
+</tr>
+<tr>
+<td><code>hexo d -g</code></td>
+<td>生成并部署，等价于 <code>hexo g; hexo d</code></td>
+</tr>
+<tr>
+<td><code>hexo list post</code></td>
+<td>列出所有文章的<strong>文件名</strong>（不是 title）</td>
+</tr>
+<tr>
+<td><code>hexo config marked</code></td>
+<td>看配置实际解析成什么，排查图片路径的神器</td>
+</tr>
+</tbody></table>
+<p><code>hexo init 目录名</code> 是给全新的空目录初始化用的，这台机器上已经不需要了；同理 <code>npm install</code> 只在第一次或依赖变更（<code>package.json</code> 改了）时跑。</p>
+<h2 id="3-每天走一遍的流程"><a href="#3-每天走一遍的流程" class="headerlink" title="3. 每天走一遍的流程"></a>3. 每天走一遍的流程</h2><h3 id="3-1-写新文章"><a href="#3-1-写新文章" class="headerlink" title="3.1 写新文章"></a>3.1 写新文章</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> D:\zhangjunhaoCODE\projects\myblog</span><br><span class="line"></span><br><span class="line">hexo new my<span class="literal">-post</span>                                    <span class="comment"># 文件名用英文/拼音</span></span><br><span class="line">code source\_posts\my<span class="literal">-post</span>.md                       <span class="comment"># 中文标题写在 title: 里</span></span><br><span class="line">hexo s                                              <span class="comment"># 预览 http://localhost:4000</span></span><br><span class="line">hexo clean; hexo g; hexo d                          <span class="comment"># ① 上线</span></span><br><span class="line">git add <span class="literal">-A</span>; git commit <span class="literal">-m</span> <span class="string">&quot;post: my-post&quot;</span>; git push  <span class="comment"># ② 备份源码</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>① 和 ② 都要做</strong>：只做 ① 站点更新了但源码没备份；只做 ② 白备份一场，线上没有任何变化。</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>只改文章正文</td>
+<td><code>hexo g; hexo d</code></td>
+</tr>
+<tr>
+<td>换了主题、删了文章、改了 <code>_config.yml</code></td>
+<td><code>hexo clean; hexo g; hexo d</code></td>
+</tr>
+<tr>
+<td>上线前的保险</td>
+<td><code>Test-Path public\index.html</code>，必须是 <code>True</code></td>
+</tr>
+</tbody></table>
+<h3 id="3-2-改已有的文章"><a href="#3-2-改已有的文章" class="headerlink" title="3.2 改已有的文章"></a>3.2 改已有的文章</h3><p><strong>不要重新 <code>hexo new</code></strong>，直接改原来那个 <code>.md</code>：文件名不变，URL 就不变。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git pull                                   <span class="comment"># 多台机器写作时先拉</span></span><br><span class="line">code source\_posts\Unreal<span class="literal">-Engine-5-Material</span>.md</span><br><span class="line">hexo s                                     <span class="comment"># 预览</span></span><br><span class="line">hexo g; hexo d                             <span class="comment"># 上线</span></span><br><span class="line">git add <span class="literal">-A</span>; git commit <span class="literal">-m</span> <span class="string">&quot;post: 更新 ...&quot;</span>; git push</span><br></pre></td></tr></table></figure>
+
+<p>改了 <code>title</code>、<code>categories</code>、<code>tags</code>、<code>date</code> 这类会影响分类页&#x2F;归档页的字段，要连 <code>hexo clean</code> 一起跑。<code>updated</code> 字段不写就取文件修改时间，想固定就自己填。</p>
+<h3 id="3-3-删文章"><a href="#3-3-删文章" class="headerlink" title="3.3 删文章"></a>3.3 删文章</h3><p>先 <code>hexo list post</code> 确认文件名，再删两样：<code>.md</code> 和它的<strong>同名图片文件夹</strong>。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Remove-Item</span> source\_posts\hello.md <span class="literal">-Force</span></span><br><span class="line"><span class="built_in">Remove-Item</span> source\_posts\hello <span class="literal">-Recurse</span> <span class="literal">-Force</span> <span class="literal">-ErrorAction</span> SilentlyContinue</span><br><span class="line">hexo clean; hexo g; hexo d</span><br><span class="line">git add <span class="literal">-A</span>; git commit <span class="literal">-m</span> <span class="string">&quot;post: 删除 hello&quot;</span>; git push</span><br></pre></td></tr></table></figure>
+
+<p>删除<strong>必须</strong> <code>hexo clean</code>，否则 <code>db.json</code> 和 <code>public\</code> 里还留着旧页面、分类页和归档页。已经公开过的文章删掉后原链接会 404，慎删。</p>
+<h2 id="4-Git：源码备份"><a href="#4-Git：源码备份" class="headerlink" title="4. Git：源码备份"></a>4. Git：源码备份</h2><p>站点仓库和源码仓库是两个东西，别混：<code>hexo d</code> 推的是<strong>公开的 Pages 仓库</strong>（只放生成的 HTML），下面这些推的是<strong>源码仓库</strong>（Markdown + 图片 + 配置）。</p>
+<h3 id="4-1-双远程：Gitee-主、GitHub-镜像"><a href="#4-1-双远程：Gitee-主、GitHub-镜像" class="headerlink" title="4.1 双远程：Gitee 主、GitHub 镜像"></a>4.1 双远程：Gitee 主、GitHub 镜像</h3><table>
+<thead>
+<tr>
+<th>远程</th>
+<th>地址</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>origin</code></td>
+<td><code>gitee.com/chapter-001/myblog</code></td>
+<td>日常默认推送</td>
+</tr>
+<tr>
+<td><code>github</code></td>
+<td><code>github.com/820-qqu/myblog</code></td>
+<td>镜像备份</td>
+</tr>
+</tbody></table>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push          <span class="comment"># 推 Gitee</span></span><br><span class="line">git push github   <span class="comment"># 推 GitHub</span></span><br><span class="line">git pushall       <span class="comment"># 两边一起推（本机配置的别名）</span></span><br><span class="line">git remote <span class="literal">-v</span>     <span class="comment"># 看两个地址</span></span><br></pre></td></tr></table></figure>
+
+<p>Gitee 私有仓库用私人令牌登录，令牌存在 Windows 凭据管理器里，<strong>不要</strong>写进 <code>remote</code> 地址。第一次在新机器上克隆 <code>origin</code> 会要求授权一次，之后 git 自己记住。</p>
+<h3 id="4-2-每天三条"><a href="#4-2-每天三条" class="headerlink" title="4.2 每天三条"></a>4.2 每天三条</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status <span class="literal">--short</span>          <span class="comment"># 先看改了哪些文件</span></span><br><span class="line">git add <span class="literal">-A</span>                  <span class="comment"># 暂存（会用上图片的增删）</span></span><br><span class="line">git commit <span class="literal">-m</span> <span class="string">&quot;post: 说明&quot;</span>   <span class="comment"># 提交</span></span><br><span class="line">git push                    <span class="comment"># 推 origin（Gitee）</span></span><br></pre></td></tr></table></figure>
+
+<p><code>git add .</code> 也能用，但 <code>-A</code> 会连删除一起记录，删过文章时更准确。</p>
+<h3 id="4-3-看历史、回滚"><a href="#4-3-看历史、回滚" class="headerlink" title="4.3 看历史、回滚"></a>4.3 看历史、回滚</h3><table>
+<thead>
+<tr>
+<th>想做什么</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>最近 5 条提交</td>
+<td><code>git log --oneline -5</code></td>
+</tr>
+<tr>
+<td>带分支图的完整历史</td>
+<td><code>git log --oneline --graph</code></td>
+</tr>
+<tr>
+<td>某次改了什么</td>
+<td><code>git show 提交号</code></td>
+</tr>
+<tr>
+<td>还没暂存的差异</td>
+<td><code>git diff</code></td>
+</tr>
+<tr>
+<td>撤销某个文件的工作区改动</td>
+<td><code>git restore 文件名</code></td>
+</tr>
+<tr>
+<td>撤销最近一次提交但保留改动</td>
+<td><code>git reset --soft HEAD~1</code></td>
+</tr>
+<tr>
+<td>拉远程更新</td>
+<td><code>git pull</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><code>git reset --hard</code> 会连工作区改动一起丢掉，不到万不得已别用；真要用先把 <code>git status</code> 看清楚。</p>
+</blockquote>
+<h3 id="4-4-换机器"><a href="#4-4-换机器" class="headerlink" title="4.4 换机器"></a>4.4 换机器</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone 源码仓库地址 myblog</span><br><span class="line"><span class="built_in">cd</span> myblog</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>图片跟着 <code>.md</code> 一起在 <code>source\_posts\</code> 里，克隆就下来了，不用单独拷。<code>public\</code>、<code>node_modules\</code>、<code>db.json</code> 都在 <code>.gitignore</code> 里，本来就不进仓库，<code>hexo g</code> 会重新生成。</p>
+<h2 id="5-部署配置"><a href="#5-部署配置" class="headerlink" title="5. 部署配置"></a>5. 部署配置</h2><p><code>_config.yml</code> 末尾的 <code>deploy</code> 段决定 <code>hexo d</code> 推到哪：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/820-qqu/820-qqu.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+
+<p>想同时发布到 Gitee Pages，就把 <code>repo</code> 写成多目标（分支名要和对方后台选的一致）：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">https://github.com/820-qqu/820-qqu.github.io.git</span></span><br><span class="line">    <span class="attr">gitee:</span> <span class="string">https://gitee.com/chapter-001/chapter-001.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+
+<p>两个注意点：</p>
+<ul>
+<li>Gitee Pages 免费版要在网页后台点一次「更新」，不点不会自动生效；GitHub Pages 一般 1 到 2 分钟自己构建完。</li>
+<li>源码仓库可以私有，但 <strong>Pages 仓库必须是公开的</strong>，公开仓库免费开 Pages。</li>
+</ul>
+<p><code>.gitignore</code> 至少要有这几行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy_git/</span><br><span class="line">db.json</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-排错速查"><a href="#6-排错速查" class="headerlink" title="6. 排错速查"></a>6. 排错速查</h2><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hexo</code> 不是内部或外部命令</td>
+<td>没装 <code>npm install -g hexo-cli</code>，或装完没重开窗口</td>
+</tr>
+<tr>
+<td><code>无法加载文件 hexo.ps1，因为在此系统上禁止运行脚本</code></td>
+<td><code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code>，只需一次</td>
+</tr>
+<tr>
+<td><code>TypeError: Invalid URL</code></td>
+<td><code>_config.yml</code> 的 <code>url:</code> 不能带尖括号，写裸地址</td>
+</tr>
+<tr>
+<td>线上 404 &#x2F; 本地 <code>Cannot GET /</code></td>
+<td><code>Test-Path public\index.html</code>；再确认 <code>source\_posts\</code> 不是空的</td>
+</tr>
+<tr>
+<td>图片 404</td>
+<td><code>hexo config marked</code> 看 <code>postAsset: true</code>；再查文件夹名是否带连字符</td>
+</tr>
+<tr>
+<td><code>hexo d</code> 推不上去</td>
+<td>先 <code>git ls-remote</code> 探路，再查代理</td>
+</tr>
+<tr>
+<td>推上去了网页没变</td>
+<td>是不是只 <code>hexo d</code> 没 <code>hexo g</code>？浏览器 Ctrl+F5 强刷</td>
+</tr>
+<tr>
+<td><code>git log</code> 中文像乱码</td>
+<td>只是显示问题：<code>[Console]::OutputEncoding = [System.Text.Encoding]::UTF8</code></td>
+</tr>
+</tbody></table>
+<p><strong>代理</strong>：系统代理端口是 <code>127.0.0.1:7897</code>（不是 7890）。代理软件开着时让 git 也走它，关掉后记得撤回，否则 git 会去连一个不存在的端口。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="literal">--global</span> http.proxy http://<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">7897</span></span><br><span class="line">git config <span class="literal">--global</span> https.proxy http://<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">7897</span></span><br><span class="line">git config <span class="literal">--global</span> <span class="literal">--unset</span> http.proxy</span><br><span class="line">git config <span class="literal">--global</span> <span class="literal">--unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+
+<p><strong>SSH（可选，比 HTTPS 少一次授权）</strong>：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> ed25519 <span class="literal">-C</span> <span class="string">&quot;1306818898@qq.com&quot;</span></span><br><span class="line"><span class="built_in">cat</span> ~/.ssh/id_ed25519.pub</span><br><span class="line">ssh <span class="literal">-T</span> git@gitee.com</span><br><span class="line">ssh <span class="literal">-T</span> git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>公钥分别贴到 Gitee 和 GitHub 的 SSH 公钥设置里；两台机器的地址改成 <code>git@</code> 开头即可，HTTPS 也能用，没必要为它折腾。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://820-qqu.github.io/2026/10/21/hexo-git-cheatsheet/" data-id="cuidSfvEgQgY8MYYE2xnuKjdF" data-title="Hexo + Git 命令速查" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%83%A8%E7%BD%B2/" rel="tag">部署</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/10/21/markdown-cheatsheet/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Markdown 语法速查
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/10/20/Unreal-Engine-5-Material/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">虚幻5材质与节点系统笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/%E9%80%9F%E6%9F%A5/">速查</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/">图形学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%99%9A%E5%B9%BB5/">虚幻5</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%86%99%E4%BD%9C/" rel="tag">写作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%90%E8%B4%A8/" rel="tag">材质</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9D%80%E8%89%B2%E5%99%A8/" rel="tag">着色器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8A%82%E7%82%B9/" rel="tag">节点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%83%A8%E7%BD%B2/" rel="tag">部署</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E5%86%99%E4%BD%9C/" style="font-size: 10px;">写作</a> <a href="/tags/%E6%9D%90%E8%B4%A8/" style="font-size: 10px;">材质</a> <a href="/tags/%E7%9D%80%E8%89%B2%E5%99%A8/" style="font-size: 10px;">着色器</a> <a href="/tags/%E8%8A%82%E7%82%B9/" style="font-size: 10px;">节点</a> <a href="/tags/%E9%83%A8%E7%BD%B2/" style="font-size: 10px;">部署</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/10/">十月 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/10/21/markdown-cheatsheet/">Markdown 语法速查</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/21/hexo-git-cheatsheet/">Hexo + Git 命令速查</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/20/Unreal-Engine-5-Material/">虚幻5材质与节点系统笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 章臣宇<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
