@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://820-qqu.github.io/img/butterfly-icon.png">
 <meta property="article:published_time" content="2026-10-20T11:16:50.000Z">
-<meta property="article:modified_time" content="2026-10-22T13:23:40.472Z">
+<meta property="article:modified_time" content="2026-11-04T14:03:14.737Z">
 <meta property="article:author" content="820-qqu">
 <meta property="article:tag" content="材质">
 <meta property="article:tag" content="着色器">
@@ -20,7 +20,7 @@
   "url": "https://820-qqu.github.io/2026/10/20/Unreal-Engine-5-Material/",
   "image": "https://820-qqu.github.io/img/butterfly-icon.png",
   "datePublished": "2026-10-20T11:16:50.000Z",
-  "dateModified": "2026-10-22T13:23:40.472Z",
+  "dateModified": "2026-11-04T14:03:14.737Z",
   "author": [
     {
       "@type": "Person",
@@ -203,7 +203,7 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">820-qqu 的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">虚幻5材质与节点系统笔记</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">虚幻5材质与节点系统笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-10-20T11:16:50.000Z" title="发表于 2026-10-20 19:16:50">2026-10-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-10-22T13:23:40.472Z" title="更新于 2026-10-22 21:23:40">2026-10-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/">图形学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%99%9A%E5%B9%BB5/">虚幻5</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>这篇博客是帮助我认识UE5材质与节点系统里常见和使用的概念（示例项目是——展览馆）。</p>
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">820-qqu 的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">虚幻5材质与节点系统笔记</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">虚幻5材质与节点系统笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-10-20T11:16:50.000Z" title="发表于 2026-10-20 19:16:50">2026-10-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-11-04T14:03:14.737Z" title="更新于 2026-11-04 22:03:14">2026-11-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/">图形学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%99%9A%E5%B9%BB5/">虚幻5</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>这篇博客是帮助我认识UE5材质与节点系统里常见和使用的概念（示例项目是——展览馆）。</p>
 <span id="more"></span>
 
 <h2 id="1-Floor（向下取整）"><a href="#1-Floor（向下取整）" class="headerlink" title="1. Floor（向下取整）"></a>1. Floor（向下取整）</h2><p><code>Floor</code>（向下取整）是一个数学节点</p>
@@ -391,4 +391,434 @@
 </tr>
 </tbody></table>
 <h3 id="3-1节点示例连线"><a href="#3-1节点示例连线" class="headerlink" title="3.1节点示例连线"></a>3.1节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-sine.png" alt="Sine 节点连线"></p>
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9D%90%E8%B4%A8/">材质</a><a class="post-meta__tags" href="/tags/%E7%9D%80%E8%89%B2%E5%99%A8/">着色器</a><a class="post-meta__tags" href="/tags/%E8%8A%82%E7%82%B9/">节点</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/10/21/markdown-cheatsheet/" title="Markdown 语法速查"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Markdown 语法速查</div></div><div class="info-2"><div class="info-item-1">按本站实际渲染能力整理的 Markdown 速查：标题、表格、代码、图片、Mermaid 与转义坑。</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">820-qqu</div><div class="author-info-description">图形学与编程笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/820-qqu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">记录图形学与编程笔记。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Floor%EF%BC%88%E5%90%91%E4%B8%8B%E5%8F%96%E6%95%B4%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">1. Floor（向下取整）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%AE%83%E5%92%8C%E5%B8%B8%E7%94%A8%E8%8A%82%E7%82%B9%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 它和常用节点的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Frac%EF%BC%88%E5%8F%96%E5%B0%8F%E6%95%B0%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">2. Frac（取小数）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%86"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 核心区分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%9C%A8%E6%9D%90%E8%B4%A8%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 在材质中的应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Sine%EF%BC%88%E6%AD%A3%E5%BC%A6%E6%B3%A2%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">3. Sine（正弦波）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">3.1.</span> <span class="toc-text">3.1节点示例连线</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/21/markdown-cheatsheet/" title="Markdown 语法速查">Markdown 语法速查</a><time datetime="2026-10-21T15:50:00.000Z" title="发表于 2026-10-21 23:50:00">2026-10-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/20/Unreal-Engine-5-Material/" title="虚幻5材质与节点系统笔记">虚幻5材质与节点系统笔记</a><time datetime="2026-10-20T11:16:50.000Z" title="发表于 2026-10-20 19:16:50">2026-10-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 820-qqu</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="144,238,144" opacity="0.65" zIndex="-1" count="150" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+<p>首先建立纹理坐标（<code>TexCoord</code>）节点，节点里的数值保持默认，然后使用<code>Mask</code>节点取<code>R</code>的范围值，把二维空间问题降维成了一维，使得后续操作只会产生垂直的条纹。创建<code>Time</code>节点（输出游戏运行的总时间——秒，每一帧都在递增。），使用<code>Add</code>节点将上半路的“静态坐标”（A端口）与下半路的“动态时间”（B端口）相加。相加的结果输入给<code>Sine</code>节点，这相当于给正弦波施加了一个随时间不断递增的“相位偏移”，让原本静止的波形产生流动感。最后，将<code>Sine</code>输出的 -1 ~ 1 的平滑波浪数值，直接连入材质主节点的**基础颜色（Base Color）**端口。由于颜色不能为负，负数部分会被截断为纯黑，正数部分则呈现从黑到白的平滑渐变，从而实现了黑白相间的平滑条纹随时间无缝流动的视觉效果。</p>
+<h3 id="3-2-核心区分"><a href="#3-2-核心区分" class="headerlink" title="3.2 核心区分"></a>3.2 核心区分</h3><table>
+<thead>
+<tr>
+<th>节点名</th>
+<th>作用</th>
+<th>举例</th>
+<th>本质</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Sine</code>(正弦波)</td>
+<td>生成平滑的上下波浪循环</td>
+<td>输入约 1.57 (π&#x2F;2) 输出 1.0；输入约 3.14 (π) 输出 0.0</td>
+<td>周期性平滑波动，范围 -1 ~ 1</td>
+</tr>
+<tr>
+<td><code>Cosine</code>(余弦波)</td>
+<td>与Sine完全相同，仅相位不同</td>
+<td>输入 0 输出 1.0；输入约 1.57 (π&#x2F;2) 输出 0.0</td>
+<td>相当于<code>Sine(Input + π/2)</code></td>
+</tr>
+<tr>
+<td><code>Frac</code>(取小数)</td>
+<td>生成锯齿波</td>
+<td>输入 1.2 输出 0.2</td>
+<td>匀速上升，瞬间归零，范围 0 ~ 1，不平滑</td>
+</tr>
+<tr>
+<td><code>Triangle Wave</code>(三角波)</td>
+<td>生成线性的上下折返</td>
+<td>需用<code>Abs</code>和<code>Frac</code>组合搭建</td>
+<td>匀速上升和下降，有折角，不平滑</td>
+</tr>
+</tbody></table>
+<p>注意：<code>Sine</code>和<code>Frac</code>最容易混淆。<code>Frac</code>是“直线上升然后垂直掉落”（锯齿波），而<code>Sine</code>是“像海浪一样平滑地起伏”（正弦波）。</p>
+<h3 id="3-3-在材质中的应用场景"><a href="#3-3-在材质中的应用场景" class="headerlink" title="3.3 在材质中的应用场景"></a>3.3 在材质中的应用场景</h3><p><strong>1. 呼吸灯与脉冲（Pulse）</strong><br>如果你想让自发光（Emissive）像心跳一样忽明忽暗，可以用<code>Sine(Time)</code>。因为输出有负数，通常会接一个<code>Remap</code>（重映射），把 -1 ~ 1 映射到 0 ~ 1，这样发光强度就会在“全黑”和“全亮”之间平滑过渡。</p>
+<p><strong>2. 周期性平移与摆动（Oscillation）</strong><br>做像雷达扫描、风扇转动，或者摆钟的效果时，普通的<code>Time</code>会让物体一直往一个方向动。如果使用<code>Sine(Time)</code>并乘以一个常量，再去控制位移（如<code>Add</code>给UV，或连接到世界位置偏移），物体就会在起点和终点之间来回摆动。</p>
+<p><strong>3. 制作水波纹或波浪起伏（Wave）</strong><br>将多个不同方向、不同频率的<code>Sine</code>波形相加（比如<code>Sine(U) + Sine(V)</code>），可以得到像水面一样复杂且平滑的波浪起伏。这在做水面材质、旗帜飘动、或者地形微起伏时极为常用。</p>
+<p><strong>4. 平滑渐变遮罩</strong><br>如果你需要在一个模型表面产生一条柔和的过渡带（比如边缘发光、或者渐隐效果），利用<code>Sine</code>配合<code>Saturate</code>（截断 0~1）或<code>Abs</code>（取绝对值），可以快速得到没有任何硬边缘的渐变遮罩。</p>
+<h2 id="4-IF（条件判断）"><a href="#4-IF（条件判断）" class="headerlink" title="4. IF（条件判断）"></a>4. IF（条件判断）</h2><p><code>IF</code>节点是一个逻辑判断工具。它通过比较两个输入值，来决定最终输出什么结果。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>三个输入：A、B，以及比较条件（&gt;、&#x3D;&#x3D;、&lt;）</td>
+<td>A&#x3D;UV坐标，B&#x3D;0.5常量</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>根据条件切换输出值</td>
+<td>条件成立输出上端口的值，否则输出下端口的值</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td>相当于编程里的<code>if...else...</code></td>
+<td><code>A &gt; B ? 1.0 : A</code></td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>硬边的分割、遮罩、二值化（非黑即白）</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>配合<code>Frac</code>或<code>TexCoord</code>做条纹切割</td>
+</tr>
+</tbody></table>
+<h3 id="4-1-节点示例连线"><a href="#4-1-节点示例连线" class="headerlink" title="4.1 节点示例连线"></a>4.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-if.png" alt="If 节点连线"></p>
+<p>首先建立纹理坐标（<code>TexCoord</code>）节点，使用<code>Mask</code>节点取<code>R</code>的范围值，得到一个 0~1 的平滑渐变。将这个渐变接入<code>IF</code>节点的<code>A</code>端口，创建一个常量 0.5 接入<code>B</code>端口。在<code>IF</code>节点的下方分支<code>（A&gt;B 和 A==B）</code>，我们分别接入了两个常量：1.0 和 0.5；在最下面的分支<code>（A&lt;B）</code>，接回了原始的渐变输入。</p>
+<p><strong>最终效果：</strong> 原本平滑的黑白渐变被“切”成了两部分。大于 0.5 的区域变成了纯白（1.0），小于 0.5 的区域保留了原始的平滑渐变。</p>
+<h3 id="4-2-应用场景"><a href="#4-2-应用场景" class="headerlink" title="4.2 应用场景"></a>4.2 应用场景</h3><p><strong>1. 硬边遮罩：</strong> 用来抠掉模型上不需要的部分，或者制作边缘锐利的图案。<br><strong>2. 阶梯化处理：</strong> 把柔和的渐变硬生生截断，形成类似卡通渲染<code>（Toon Shading）</code>中的硬边阴影。</p>
+<h2 id="5-Lerp（线性插值）"><a href="#5-Lerp（线性插值）" class="headerlink" title="5. Lerp（线性插值）"></a>5. Lerp（线性插值）</h2><p><code>Lerp</code>是材质中最常用的节点之一，用于在两个值之间进行平滑过渡。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>A（起点）、B（终点）、Alpha（插值比例）</td>
+<td>A&#x3D;蓝色，B&#x3D;橙色，Alpha&#x3D;0.5</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>混合后的颜色或数值</td>
+<td>50%蓝 + 50%橙 &#x3D; 灰绿色（视色彩空间而定）</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td><code>A + Alpha × (B - A)</code></td>
+<td>Alpha为0输出A，为1输出B，0.5取中间值</td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>两种材质的混合、平滑的渐变、遮罩过渡</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>配合时间、正弦波做颜色切换；配合贴图做混合</td>
+</tr>
+</tbody></table>
+<h3 id="5-1-节点示例连线"><a href="#5-1-节点示例连线" class="headerlink" title="5.1 节点示例连线"></a>5.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-lerp.png" alt="Lerp 节点连线"></p>
+<p>上半路创建两个颜色常量（A端口为浅蓝色 0,0.88,1，B端口为深橙色 1,0.62,0）。下半路用<code>Time</code>驱动<code>Sine</code>产生一个平滑的波浪值（范围 -1 ~ 1），将其接入 <code>Subtract</code>的 B 端口；再用<code>TexCoord(R)</code>接入 A 端口。两者相减后，接入<code>Clamp</code>（限制在 0 ~ 1）作为遮罩。最后将<code>Clamp</code>的结果接入<code>Lerp</code>的 Alpha 端口。</p>
+<p><strong>最终效果：</strong> 模型表面呈现出两种颜色随正弦波平滑交替流动的视觉效果。</p>
+<h3 id="5-2-应用场景"><a href="#5-2-应用场景" class="headerlink" title="5.2 应用场景"></a>5.2 应用场景</h3><p><strong>1. 材质混合：</strong> 根据地形的高度<code>（Mask）</code>混合草地和岩石。<br><strong>2. 颜色渐变：</strong> 做天空球、发光特效的渐变色彩过渡。<br><strong>3. 状态切换：</strong> 做角色受击闪白效果（配合时间）。</p>
+<h2 id="6-OneMinus（1-x-反向）"><a href="#6-OneMinus（1-x-反向）" class="headerlink" title="6. OneMinus（1-x &#x2F; 反向）"></a>6. OneMinus（1-x &#x2F; 反向）</h2><p><code>OneMinus</code>节点非常简单，就是数学上的 1 - 输入值，用于反转结果。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>任意标量或向量</td>
+<td>0.2 或 渐变</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>反转后的数值</td>
+<td>1 - 0.2 &#x3D; 0.8</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td><code>1.0 - Input</code></td>
+<td>黑的变白，白的变黑</td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>颜色反转、遮罩反向</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>配合<code>Lerp、Sign</code>做反向控制</td>
+</tr>
+</tbody></table>
+<h3 id="6-1-节点示例连线"><a href="#6-1-节点示例连线" class="headerlink" title="6.1 节点示例连线"></a>6.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-oneminus.png" alt="Oneminus 节点连线"></p>
+<p>上方通过<code>TexCoord(R)</code>乘以 2 再减去 1（范围变成 -1~1），经过<code>Sign</code>节点取符号（输出 -1 或 1），再接入<code>OneMinus</code>（-1变2，1变0，配合基础颜色实际上变成了硬边黑白的反转）。下方<code>Time</code>接入<code>Sine</code>再经过<code>Abs</code>取绝对值，作为<code>Lerp</code>的 Alpha。</p>
+<p><strong>最终效果：</strong> 黑白条纹随时间不断地翻转交替。</p>
+<h3 id="6-2-应用场景"><a href="#6-2-应用场景" class="headerlink" title="6.2 应用场景"></a>6.2 应用场景</h3><p><strong>1. 遮罩反转：</strong> 当你需要一个完全相反的遮罩时，不用重新连线，直接加个<code>OneMinus</code>。<br><strong>2. 菲涅尔效果的内部：</strong> 调整边缘发光还是中心发光。</p>
+<h2 id="7-Power（幂-指数）"><a href="#7-Power（幂-指数）" class="headerlink" title="7. Power（幂 &#x2F; 指数）"></a>7. Power（幂 &#x2F; 指数）</h2><p><code>Power</code>节点用于求幂运算，在材质中常用于调整对比度和曲线形状。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>Base（底数）、Exp（指数）</td>
+<td>Base&#x3D;0.5，Exp&#x3D;2.0</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>幂运算的结果</td>
+<td>0.5 * 0.5&#x3D;0.25</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td>求幂运算</td>
+<td>当Exp&gt;1，小于1的数变小；当Exp&lt;1，数变大</td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>调整渐变的对比度、调整发光衰减（光晕）</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>配合<code>Frac</code>的锯齿波做发光脉冲</td>
+</tr>
+</tbody></table>
+<h3 id="7-1-节点示例连线"><a href="#7-1-节点示例连线" class="headerlink" title="7.1 节点示例连线"></a>7.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-power.png" alt="Power 节点连线"></p>
+<p>上半路用<code>TexCoord(R)</code>作为底数<code>（Base）</code>。下半路<code>Time</code>乘以 0.5 后经过<code>Frac</code>得到 0~1 的锯齿波，再乘以 7.0 放大周期，接入<code>Power</code>的指数（Exp）端口。</p>
+<p><strong>最终效果：</strong> 在模型表面，原本平滑的渐变随着时间推移，会不断产生非线性（指数级）的拉伸和收缩，表现为黑白交界处平滑地“呼吸”或动态渐变。</p>
+<h3 id="7-2-应用场景"><a href="#7-2-应用场景" class="headerlink" title="7.2 应用场景"></a>7.2 应用场景</h3><p><strong>1. 发光衰减：</strong> 距离发光中心越远，亮度衰减越快（指数衰减）。<br><strong>2. 对比度调整：</strong> 让渐变变得更“硬”或者更“软”。</p>
+<h2 id="8-Sign（取符号）"><a href="#8-Sign（取符号）" class="headerlink" title="8. Sign（取符号）"></a>8. Sign（取符号）</h2><p><code>Sign</code>节点用于判断数值的正负号。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>任意标量或向量</td>
+<td>-5.2、0、3.1</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>返回值的正负号</td>
+<td>-1.0、0.0、1.0</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td>大于0输出1，小于0输出-1，等于0输出0</td>
+<td>剥离数值大小，只看正负</td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>绝对硬边的分割（非黑即白），无过渡</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>配合三角函数做方波、配合减法做二值化遮罩</td>
+</tr>
+</tbody></table>
+<h3 id="8-1-节点示例连线"><a href="#8-1-节点示例连线" class="headerlink" title="8.1 节点示例连线"></a>8.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-sign.png" alt="Sign 节点连线"></p>
+<p>使用<code>TexCoord(R)</code>获取渐变，乘以 2.0，再减去 1.0，把范围从 0 ~ 1 映射到 -1 ~ 1。将其接入<code>Sign</code>节点，再连入基础颜色。</p>
+<p><strong>最终效果：</strong> 因为中间值是 0，所以模型表面会出现一条极其锋利的黑白分界线，一半是纯黑（负值映射为黑色），一半是纯白（正值映射为白色）。</p>
+<h3 id="8-2-应用场景"><a href="#8-2-应用场景" class="headerlink" title="8.2 应用场景"></a>8.2 应用场景</h3><p><strong>1. 方波生成：</strong> 配合<code>Sine</code>或线性渐变，制造完全硬边的交替条纹。<br><strong>2. 极简卡通描边：</strong> 判断法线朝向，硬切出明暗交界线。</p>
+<h2 id="9-Abs（绝对值）"><a href="#9-Abs（绝对值）" class="headerlink" title="9. Abs（绝对值）"></a>9. Abs（绝对值）</h2><p><code>Abs</code>节点将输入的负数变为正数，正数保持不变。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>任意数值</td>
+<td>-0.5、0.8</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>绝对值</td>
+<td>0.5、0.8</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td>(Input)</td>
+<td>负数折叠成正数</td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>“折叠”波浪、波谷变波峰、双倍频率的平滑条纹</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>配合<code>Sine</code>让波浪产生折角、配合位移做来回震荡</td>
+</tr>
+</tbody></table>
+<h3 id="9-1-节点示例连线"><a href="#9-1-节点示例连线" class="headerlink" title="9.1 节点示例连线"></a>9.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-abs.png" alt="Abs 节点连线"></p>
+<p><code>TexCoord(R)</code>加上<code>Time</code>接入<code>Sine</code>，得到平滑的正弦波，然后再接入<code>Abs</code>，最后连入基础颜色。</p>
+<p><strong>最终效果：</strong> 由于正弦波原本的负值（波谷）被绝对值“翻折”到了上面（变成波峰），原本黑下去的部分现在全亮了。视觉上条纹数量翻了一倍，且全呈现出平滑的亮部过渡。</p>
+<h3 id="9-2-应用场景"><a href="#9-2-应用场景" class="headerlink" title="9.2 应用场景"></a>9.2 应用场景</h3><p><strong>1. 制作来回振荡：</strong> 让物体做正弦运动时，如果不需要掉头时的减速（比如做风扇转动），加上<code>Abs</code>可以立刻反向。<br><strong>2. 制作波纹：</strong> 将<code>Sine</code>和<code>Abs</code>配合，能快速做出模拟水波的连续亮条纹。</p>
+<h2 id="10-Clamp（钳制-限制）"><a href="#10-Clamp（钳制-限制）" class="headerlink" title="10. Clamp（钳制 &#x2F; 限制）"></a>10. Clamp（钳制 &#x2F; 限制）</h2><p><code>Clamp</code>节点用于限制输出范围，防止数值过大或过小。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>要限制的数值</td>
+<td>0.8、-2.0</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>处于<code>Min</code>和<code>Max</code>之间的值</td>
+<td>若限制在 0~0.5，0.8 变 0.5，-2.0 变 0.0</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td><code>Max(Min,Min(Input,Max))</code></td>
+<td>截断超出的范围</td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>防止过曝、去除极黑&#x2F;极白、控制局部对比度</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>配合<code>Sine</code>控制脉冲的最高亮度</td>
+</tr>
+</tbody></table>
+<h3 id="10-1-节点示例连线"><a href="#10-1-节点示例连线" class="headerlink" title="10.1 节点示例连线"></a>10.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-clamp.png" alt="Clamp 节点连线"></p>
+<p><code>TexCoord(R)</code>加上<code>Time</code>，接入<code>Sine</code>得到 -1~1 的连续波浪。然后接入<code>Clamp</code>，将<code>Min</code>设为 0.0，<code>Max</code>设为 0.2，连入基础颜色。</p>
+<p><strong>最终效果：</strong> 因为正弦波小于 0 的部分被死死按在了 0（纯黑），大于 0.2 的部分被按在 0.2（偏暗），最后模型上只剩下一条条非常细、非常灰暗的流动条纹，大面积是黑的。</p>
+<h3 id="10-2-应用场景"><a href="#10-2-应用场景" class="headerlink" title="10.2 应用场景"></a>10.2 应用场景</h3><p><strong>1. 防止过曝：</strong> 在做高光或自发光叠加时，防止数值超过 1.0 导致刺眼。<br><strong>2. 提取窄带：</strong> 只让特定范围内的数值显示出来，形成细线。</p>
+<h2 id="11-Cosine（余弦）"><a href="#11-Cosine（余弦）" class="headerlink" title="11. Cosine（余弦）"></a>11. Cosine（余弦）</h2><p><code>Cosine</code>节点与<code>Sine</code>功能相同，只是波形起始位置不同。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>决定波形相位的数值</td>
+<td><code>Time</code>、UV</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>平滑的波浪数值</td>
+<td>在 -1.0 到 1.0 之间</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td>三角函数循环</td>
+<td>相当于<code>Sine(Input + π/2)</code></td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>与<code>Sine</code>相同，但明暗位置有所偏移</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>与<code>Sine</code>一起使用产生圆形&#x2F;椭圆运动（李萨如图形）</td>
+</tr>
+</tbody></table>
+<h3 id="11-1-节点示例连线"><a href="#11-1-节点示例连线" class="headerlink" title="11.1 节点示例连线"></a>11.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-cosine.png" alt="Cosine 节点连线"></p>
+<p>连线与<code>Sine</code>完全一致。<code>TexCoord(R)</code>加上<code>Time</code>，接入<code>Cosine</code>，连入基础颜色。</p>
+<p><strong>最终效果：</strong> 与正弦波非常相似。区别在于，当输入为 0 时，<code>Sine</code>输出 0（黑），而<code>Cosine</code>输出 1（白）。因此在此连线中，条纹的起始颜色和移动的相位与<code>Sine</code>错开了一段。</p>
+<h3 id="11-2-应用场景"><a href="#11-2-应用场景" class="headerlink" title="11.2 应用场景"></a>11.2 应用场景</h3><p><strong>1. 圆形运动：</strong> 如果让<code>Cosine(Time)</code>控制 X，<code>Sine(Time)</code>控制 Y，就能让 UV 或者物体做完美的圆周运动。</p>
+<h2 id="12-Floor（向下取整）"><a href="#12-Floor（向下取整）" class="headerlink" title="12. Floor（向下取整）"></a>12. Floor（向下取整）</h2><p><code>Floor</code>节点会丢弃小数部分，只保留不超过该数值的最大整数。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>任意数值</td>
+<td>3.8、-1.2</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>取整后的数值</td>
+<td>3.0、-2.0</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td>向下取整</td>
+<td>相当于“砍掉小数”，且总是向更小的方向走</td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>色阶分离、阶梯化（马赛克效果）、切块</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>配合<code>Frac</code>和除法做块状渐变、像素化滤镜</td>
+</tr>
+</tbody></table>
+<h3 id="12-1-节点示例连线"><a href="#12-1-节点示例连线" class="headerlink" title="12.1 节点示例连线"></a>12.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-floor.png" alt="Floor 节点连线"></p>
+<p><code>TexCoord(R)</code>乘以 7.0（放大渐变），接入<code>Floor</code>节点（此时渐变变成了从 0 到 7 的 8 个阶梯），然后再除以 7.0（<code>Divide</code>节点，把数值压回 0~1 之间），最后连入基础颜色。</p>
+<p><strong>最终效果：</strong> 原本非常丝滑的黑白渐变，变成了明显的 7 级台阶，视觉上类似海报化<code>（Posterize）</code>的色阶效果。</p>
+<h3 id="12-2-应用场景"><a href="#12-2-应用场景" class="headerlink" title="12.2 应用场景"></a>12.2 应用场景</h3><p><strong>1. 色阶分离（马赛克）：</strong> 把柔和的贴图变成像素风、漫画风。<br><strong>2. 分块处理：</strong> 配合 UV 给模型分块赋予不同的颜色或材质。</p>
+<h2 id="13-Fmod（取模）"><a href="#13-Fmod（取模）" class="headerlink" title="13. Fmod（取模）"></a>13. Fmod（取模）</h2><p><code>Fmod（Floating Point Remainder）</code>用于计算除法后的余数。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入值（Input）</td>
+<td>A（被除数）、B（除数）</td>
+<td>A&#x3D;5.2，B&#x3D;2.0</td>
+</tr>
+<tr>
+<td>输出值 (Output)</td>
+<td>余数</td>
+<td>5.2 除以 2 商 2 余 1.2，输出 1.2</td>
+</tr>
+<tr>
+<td>数学逻辑</td>
+<td>除法后取余数</td>
+<td>类似<code>Frac</code>，但周期由 B 自定义</td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>在模型表面呈现什么特征</td>
+<td>自定义周期的循环、重复贴图、环形阵列</td>
+</tr>
+<tr>
+<td>常用组合</td>
+<td>与哪些节点搭配能产生特殊变化</td>
+<td>配合 UV 做自定义数量的平铺</td>
+</tr>
+</tbody></table>
+<h3 id="13-1-节点示例连线"><a href="#13-1-节点示例连线" class="headerlink" title="13.1 节点示例连线"></a>13.1 节点示例连线</h3><p><img src="/2026/10/20/Unreal-Engine-5-Material/ue-5-node-fmod.png" alt="Fmod 节点连线"></p>
+<p>上路的<code>TexCoord(R)</code>接入<code>Fmod</code>的 A 端口。下路<code>Time</code>乘以 0.5，经过<code>Frac</code>截断，再乘以 1.0（确认范围）接入<code>Fmod</code>的 B 端口。</p>
+<p><strong>最终效果：</strong> 与<code>Frac</code>非常相似，也是产生循环渐变。区别在于<code>Frac</code>是固定除以 1.0 取余数，而<code>Fmod</code>允许你通过 B 端口控制除数的值，从而在一个周期内产生不同数量的重复。</p>
+<h3 id="13-2-应用场景"><a href="#13-2-应用场景" class="headerlink" title="13.2 应用场景"></a>13.2 应用场景</h3><p><strong>1. 自定义循环数量：</strong> 如果你想在一个面片上平铺 3 次贴图，用<code>Frac</code>做不到，用<code>Fmod(UV, 1/3)</code>就可以。<br><strong>2. 极坐标镜像：</strong> 在数学层面上高效地生成规则重复的阵列图案。</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9D%90%E8%B4%A8/">材质</a><a class="post-meta__tags" href="/tags/%E7%9D%80%E8%89%B2%E5%99%A8/">着色器</a><a class="post-meta__tags" href="/tags/%E8%8A%82%E7%82%B9/">节点</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/10/21/markdown-cheatsheet/" title="Markdown 语法速查"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Markdown 语法速查</div></div><div class="info-2"><div class="info-item-1">按本站实际渲染能力整理的 Markdown 速查：标题、表格、代码、图片、Mermaid 与转义坑。</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">820-qqu</div><div class="author-info-description">图形学与编程笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/820-qqu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">记录图形学与编程笔记。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Floor%EF%BC%88%E5%90%91%E4%B8%8B%E5%8F%96%E6%95%B4%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">1. Floor（向下取整）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%AE%83%E5%92%8C%E5%B8%B8%E7%94%A8%E8%8A%82%E7%82%B9%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 它和常用节点的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Frac%EF%BC%88%E5%8F%96%E5%B0%8F%E6%95%B0%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">2. Frac（取小数）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%86"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 核心区分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%9C%A8%E6%9D%90%E8%B4%A8%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 在材质中的应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Sine%EF%BC%88%E6%AD%A3%E5%BC%A6%E6%B3%A2%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">3. Sine（正弦波）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">3.1.</span> <span class="toc-text">3.1节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%86"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 核心区分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%9C%A8%E6%9D%90%E8%B4%A8%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 在材质中的应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-IF%EF%BC%88%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">4. IF（条件判断）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Lerp%EF%BC%88%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">5. Lerp（线性插值）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-OneMinus%EF%BC%881-x-%E5%8F%8D%E5%90%91%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">6. OneMinus（1-x &#x2F; 反向）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Power%EF%BC%88%E5%B9%82-%E6%8C%87%E6%95%B0%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">7. Power（幂 &#x2F; 指数）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Sign%EF%BC%88%E5%8F%96%E7%AC%A6%E5%8F%B7%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">8. Sign（取符号）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Abs%EF%BC%88%E7%BB%9D%E5%AF%B9%E5%80%BC%EF%BC%89"><span class="toc-number">9.</span> <span class="toc-text">9. Abs（绝对值）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">9.1.</span> <span class="toc-text">9.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">9.2.</span> <span class="toc-text">9.2 应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Clamp%EF%BC%88%E9%92%B3%E5%88%B6-%E9%99%90%E5%88%B6%EF%BC%89"><span class="toc-number">10.</span> <span class="toc-text">10. Clamp（钳制 &#x2F; 限制）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">10.1.</span> <span class="toc-text">10.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">10.2.</span> <span class="toc-text">10.2 应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Cosine%EF%BC%88%E4%BD%99%E5%BC%A6%EF%BC%89"><span class="toc-number">11.</span> <span class="toc-text">11. Cosine（余弦）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">11.1.</span> <span class="toc-text">11.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">11.2.</span> <span class="toc-text">11.2 应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Floor%EF%BC%88%E5%90%91%E4%B8%8B%E5%8F%96%E6%95%B4%EF%BC%89"><span class="toc-number">12.</span> <span class="toc-text">12. Floor（向下取整）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">12.1.</span> <span class="toc-text">12.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">12.2.</span> <span class="toc-text">12.2 应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-Fmod%EF%BC%88%E5%8F%96%E6%A8%A1%EF%BC%89"><span class="toc-number">13.</span> <span class="toc-text">13. Fmod（取模）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-1-%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B%E8%BF%9E%E7%BA%BF"><span class="toc-number">13.1.</span> <span class="toc-text">13.1 节点示例连线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">13.2.</span> <span class="toc-text">13.2 应用场景</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/21/markdown-cheatsheet/" title="Markdown 语法速查">Markdown 语法速查</a><time datetime="2026-10-21T15:50:00.000Z" title="发表于 2026-10-21 23:50:00">2026-10-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/20/Unreal-Engine-5-Material/" title="虚幻5材质与节点系统笔记">虚幻5材质与节点系统笔记</a><time datetime="2026-10-20T11:16:50.000Z" title="发表于 2026-10-20 19:16:50">2026-10-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 820-qqu</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="144,238,144" opacity="0.65" zIndex="-1" count="150" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
